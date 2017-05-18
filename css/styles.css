@@ -1,0 +1,792 @@
+/* ==========================================================================
+   General Styles
+   ========================================================================== */
+
+body {
+	font-family: 'Lato', sans-serif;
+	padding-top: 0;
+}
+
+footer {
+	background: #000000;
+    padding: 50px 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+footer.footer-image {
+	background: url(../img/footer.jpg) center no-repeat;
+	height: 700px;
+	margin-top: -255px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-left {
+	padding-left: 0;
+}
+
+.no-padding-right {
+	padding-right: 0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.margin-t-md {
+	margin-top: 30px;
+}
+
+.margin-b-md {
+	margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navbar-red {
+	background-color: rgba(173, 14, 18, 0.8);
+}
+
+.navbar-red.red {
+	background-color: #ad0e13;
+}
+
+.navbar-red .navbar-header {
+	height: 121px;
+}
+
+.navbar-red .navbar-toggle {
+	font-size: 20px;
+    color: #FFFFFF;
+}
+
+.navbar-red .navbar-collapse {
+	border: none;
+	box-shadow: none;
+}
+
+.navbar-red .navbar-brand-image img{
+	width: 170px;
+}
+
+.navbar-red .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.navbar-red .navbar-nav>li>a:focus, 
+.navbar-red .navbar-nav>li>a:hover {
+	background-color: transparent;
+}
+
+.navbar-red .nav-doc {
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.navbar-red .btn-doc {
+	background-color: #FFFFFF;
+	color: #f26522;
+	border-radius: 0;
+	padding: 6px 20px;
+	-webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+	-webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: padding-top;
+    transition-property: padding-top;
+}
+
+.navbar-red .btn-doc i {
+	margin-right: 10px;
+}
+
+ .navbar-red .btn-doc:hover {
+ 	padding-top: 12px;
+ 	
+ }
+
+.navbar-red .nav.navbar-nav {
+	margin-left: 20px;
+}
+
+.navbar-red .navbar-nav>.nav-effect>a {
+	padding: 0 0 5px;
+	margin: 10px 15px;
+	text-transform: uppercase;: 
+}
+
+.nav-effect a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #f26522;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.nav-effect a:hover::after,
+.nav-effect a:focus::after,
+.nav-effect a.active::after {
+	height: 2px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.navbar-red .nav-icon {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 20px;
+	padding: 8px 10px;
+	margin-right: 15px;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+}
+
+.navbar-red .nav-icon:hover {
+	color: #ad0e13;
+    background-color: #ffffff !important;
+}
+
+.hr-orange {
+	margin-bottom: 0;
+	margin-left: 90px;
+    margin-right: 90px;
+	border-top: 5px solid #f26522;
+}
+
+.hr-red {
+	margin-top: 7px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    border-top: 5px solid #ad0e13;
+}
+
+@media (min-width: 865px ) and (max-width: 992px) {
+	.navbar-red .container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 864px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    .navbar-red .nav.navbar-nav {
+		margin-left: 0;
+	}
+	.navbar-red .nav.navbar-nav.navbar-right {
+		display: flex;
+		margin-left: 15px;
+		margin-bottom: 20px;
+	}
+	.navbar-red .btn.btn-doc {
+		display: none;
+	}
+	.navbar-red .nav-effect.hidden {
+		display: block !important;
+	}
+}
+
+
+/* Carousel
+   ========================================================================== */
+
+#labenCarousel .container {
+	width: 100%;
+	padding: 0;
+}
+
+#labenCarousel .container .carousel-holder {
+	margin-bottom: 0;
+}
+
+#labenCarousel .carousel .carousel-inner .item .slide-image {
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#labenCarousel .carousel-control {
+	width: 5%;
+}
+
+.slide-banner {
+	position: absolute;
+    width: 50%;
+    top: 86%;
+    left: 25%;
+    transform: translateY(-50%);
+    padding: 25px 60px;
+	font-size: 1.8em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.item-a {
+	color: #000000;
+}
+
+.item-a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+.item-img {
+	margin: 0 auto;
+}
+
+.carousel-control 			 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -25%; }
+	.carousel-inner .next        { left:  25%; }
+	.carousel-inner .prev		 { left: -25%; }	
+}
+
+
+/* Section
+   ========================================================================== */
+
+.laben-section {
+	padding: 40px 0;
+}
+
+.laben-section.red {
+	background-color: #ad0e13;
+}
+
+.laben-section.orange {
+	background-color: #f26522;
+}
+
+.laben-section.gray {
+	background-color: #ececec;
+}
+
+.section-title,
+.section-title2 {
+	display: inline-block;
+	padding: 0 10px;
+	margin-bottom: 40px;
+	color: #000000;
+}
+
+.section-title.white {
+	color: #FFFFFF;
+}
+
+.section-title h2,
+.section-title2 h2 {
+	margin: 0 20px;
+	text-transform: uppercase;
+	font-size: 2.5em
+}
+
+.section-title h2:before {
+	content: "";
+	position: absolute;
+	bottom: 40px;
+	height: 25px;
+	margin-left: -25px;
+	border-left:1px solid #000000;
+}
+
+.section-title.white h2:before {
+	border-left:1px solid #FFFFFF;
+}
+
+.section-title h2:after {
+	content: "";
+	position: absolute;
+	bottom: 40px;
+	height: 25px;
+	margin-left: 25px;
+	border-right:1px solid #000000;
+}
+
+.section-title.white h2:after {
+	border-right:1px solid #FFFFFF;
+}
+
+.section-title2 {
+	padding: 0;
+}
+
+.section-title2 h2 {
+	margin: 0;
+}
+
+.section-title3 {
+	margin-bottom: 30px;
+	color: #000000;
+}
+
+.section-title3 h2 {
+	font-size: 2.5em
+}
+
+.section-p {
+	font-size: 1.2em;
+	color: #717171;
+}
+
+.section-p p {
+	margin-bottom: 20px;
+}
+
+.lead {
+	text-transform: uppercase;
+	font-size: 2em;
+	margin: 0 0 10px;
+}
+
+.sub-title {
+	font-size: 2em;
+	color: #f26522;
+	margin: 0 0 10px;
+}
+
+.col-img {
+	height: 120px;
+	margin-bottom: 20px;
+}
+
+.col-img-lg {
+	height: 150px;
+    margin-bottom: 20px;
+}
+
+.col-p {
+	margin: 10px 0 40px 0;
+}
+
+.col-p p {
+	font-size: 1.2em;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+}
+
+.grid-img {
+	height: 100px;
+	margin-bottom: 25px;
+}
+
+.btn-primary {
+	background-color: #ad0e13;
+	border-color: #ad0e13;
+	border-radius: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+	background-color: #880c10;
+	border-color: #880c10;
+}
+
+.goto-link {
+	font-size: 1.1em;
+	color: #ad0e13;
+	text-decoration: none;
+}
+
+.goto-link:hover {
+	color: #880c10;
+	text-decoration: none;
+}
+
+.clients img {
+	margin: 0 15px;
+}
+
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+	/* Index
+   	========================================================================== */
+
+	/*Carousel*/
+	.slide-banner {
+		font-size: 2.5em;
+		padding: 25px 20px;
+	}
+
+}
+
+@media (max-width: 500px) {
+	
+	/* Index
+   	========================================================================== */
+
+	/*Carousel*/
+	.slide-banner {
+		font-size: 2em;
+		padding: 25px 20px;
+	}
+
+}
+
+
+
+/* ==========================================================================
+   Products
+   ========================================================================== */
+.banner {
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#labenProducts {
+	/*background-image: url("../img/artboard5.png");*/
+	height: 122px;
+}
+
+#productsCarousel .carousel-holder {
+	margin-bottom: 0;
+}
+
+.product-list {
+	padding-top: 30px;
+}
+
+.product-list.lightgray {
+	background-color: #f5f5f5;
+}
+
+.product-list .container {
+	min-height: 800px;
+}
+
+.products-banner {
+	box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5);
+}
+
+.filter {
+	margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5);
+}
+
+.filter label{
+	color: #ad0e13;
+}
+
+.filter .btn.btn-primary {
+	margin-top: 24px;
+}
+
+.products {
+	margin: 0;
+	text-align: center;
+}
+
+.products li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.product {
+	width: 100%;
+	height: 265px;
+	margin-bottom: 10px;
+	border: 1px solid #f26522;
+	border: 1px solid #dedede;
+    background: white;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.product img {
+    margin-bottom: 5px;
+}
+
+.product-title, 
+.product-desc,
+.product-origin {
+	text-align: center;
+}
+
+.product-title {
+	margin-bottom: 5px;
+	font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product-desc {
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    color: #717171;
+}
+
+.product-origin {
+	margin-top: 5px;
+	color: #f26522;
+}
+
+
+/* ==========================================================================
+   Distribucion
+   ========================================================================== */
+
+#labenDistribution {
+	background-image: url("../img/artboard2.png");
+}
+
+
+
+/* ==========================================================================
+   Contacto
+   ========================================================================== */
+
+#mapContainer {
+	position: relative;
+}
+   
+#over_map {
+	position: absolute;
+	top: 20%;
+	z-index: 99;
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+	color: #FFFFFF;
+	padding: 20px;
+}
+
+#over_map h3 {
+	margin-top: 10px;
+	font-size: 1.7em;
+	text-transform: uppercase;
+}
+
+#over_map p {
+	font-size: 1.1em;
+}
+
+
+/* ==========================================================================
+   Login
+   ========================================================================== */
+
+#labenLogin {
+	height: 100vh;
+	min-height: 450px;
+	/*background-repeat: no-repeat;
+    background-image: linear-gradient(#ad0e13, #880c10);*/
+    background-color: #ececec;
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 0 40px 40px 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background-color: #ad0e13;
+    margin: 0 -40px 25px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 ;
+    min-height: 1em;
+}
+
+.form-signin input {
+    height: 44px;
+    font-size: 14px;
+}
+
+.form-signin input,
+.form-signin button {
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn.btn-signin {
+	font-size: 14px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+    text-decoration: none;
+}
+
+
+
+/* ==========================================================================
+   Nosotros
+   ========================================================================== */
+
+#labenNosotros {
+	background-image: url("../img/artboard6.jpg");
+}
+
+.banner-header {
+	margin-top: 122px;
+}
+
+.banner-img {
+	width: 100%;
+}
+
+
+/* ==========================================================================
+   Admin
+   ========================================================================== */
+
+.admin-section {
+	padding-top: 30px;
+}
+
+.admin-section.lightgray {
+	background-color: #f5f5f5;
+}
+
+.admin-section .menu-breadcrumbs {
+	width: 85%;
+	float: left;
+}
+
+.admin-section .btn-add {
+	width: 15%;
+	margin-top: 12px;
+	padding-right: 10px;
+	background-color: transparent;
+	color: #FFFFFF;
+}

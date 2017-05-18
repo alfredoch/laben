@@ -1,0 +1,45 @@
+CREATE TABLE Producto (
+    prod_id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(80),
+    descripcion varchar(255),
+    lugar_id int(5),
+    marca_id int(5),
+    precio_pz float,
+    precio_kg float,
+    PRIMARY KEY (prod_id)
+);
+
+CREATE TABLE Categoria (
+    cat_id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(80),
+    cat_padre int,
+    visible tinyint(1)
+    PRIMARY KEY (cat_id)
+);
+
+CREATE TABLE LugarOrigen (
+    lugar_id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(80),
+    PRIMARY KEY (lugar_id)
+);
+
+CREATE TABLE Marca (
+    marca_id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(80),
+    PRIMARY KEY (marca_id)
+);
+
+CREATE TABLE Usuario (
+    usuario_id int NOT NULL AUTO_INCREMENT,
+    username varchar(50),
+    password varchar(255),
+    email varchar(80),
+    nombre varchar(50),
+    PRIMARY KEY (usuario_id)
+);
+
+CREATE TABLE Producto_Categoria (
+    prod_id int(5),
+    cat_id int(5)
+);
+
